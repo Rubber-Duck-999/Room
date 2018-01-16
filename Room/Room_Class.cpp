@@ -48,38 +48,27 @@ namespace Paints
 
 	struct Preset_Paints
 	{
-		Colours Paint_Colour_Name;
-
-		 
-		 
+		Colours  Paint_Colour_Name;
+		uint32_t Paint_Colour_Code;
+		uint8_t  Spreading_Rate;	 
 	};
 
 	//A data structure of four preset choices
 	Preset_Paints Presets_Paints[Paints]
 	{
-		{
-			
-		},
-		
-		{
-
-		},
-		
-		{
-			
-		},
-		{
-
-		} 
+		{White, 0xFFFFFF, 10},	
+		{                   },
+		{           		},
+		{                   } 
 	};
 
-	uint16_t Get_Paint_Colour_Code(string )
+	uint16_t Get_Paint_Colour_Code(Colours Paint_Colour_Name)
 	{
-		return Presets_Paints[Preset_Choice].;
+		return Presets_Paints[Paint_Colour_Name].;
 	};
-	uint16_t Get_Paint_Colour_Code(string)
+	uint16_t Get_Paint_Colour_Code(Colours Paint_Colour_Code)
 	{
-		return Presets_Paints[Preset_Choice].;
+		return Presets_Paints[Paint_Colour_Name].;
 	};
 }
 
@@ -97,8 +86,20 @@ Generic_Room::Generic_Room
 
 }
 
+uint16_t Calculate_Area_Private(void)
+{
+	Area = Length * Width;
+	return Area;
+}
 
-uint16_t Generic_Menu::Get_Area(void)
+uint32_t Calculate_Volume_Private(void)
+{
+	Volume = ((Length) * (Width) * (Height));
+	return Volume;
+}
+
+
+uint16_t Generic_Menu::Calculate_Area(void)
 {
 	Area = Length * Width;
     return Area;

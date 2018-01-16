@@ -31,7 +31,7 @@
 
 namespace Presets
 {
-	uint16_t Get_Paint_Colour_Code(Colour_Name);
+	uint16_t Get_Paint_Colour_Code(Colours Paint_Colour_Name);
 }
 
 
@@ -40,11 +40,14 @@ class Generic_Room
 	private:
 	  //Allows access to sub-classes
 
-	  uint8_t  Length,  
-      uint8_t  Width, 
-      uint8_t  Height
-	  uint16_t Area;
-	  uint32_t Volume;
+		uint8_t  Length;
+		uint8_t  Width;
+		uint8_t  Height;
+		uint16_t Area;
+        uint32_t Volume;
+
+		uint16_t Calculate_Area_Private(void);
+		uint32_t Calculate_Volume_Private(void);
 	  
 public:
    
