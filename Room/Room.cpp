@@ -21,22 +21,31 @@
 *
 ***************************************************************************************************/
 
-
-
 #include "stdafx.h"
 #include "Room_Class.h"
-
+#include <iostream>
+using namespace std;
 
 int main()
 {
 	while(1)
 	{
+		cout << "Hello";
+		cout << '\n';
+		cout << "Welcome to the room measurements calculator \n";
+		int Length_In = 0;
+		cout << "Please enter the room Length (m): \n";
+		cin >> Length_In;
+		int Width_In = 0;
+		cout << "Please enter the room Width (m): ";
+		cin >> Width_In;
+		int Height_In = 0;
+		cout << "Please enter the room Height (m): ";
+		cin >> Height_In;
 		Generic_Room Room
-		(
-
-
-		)
-		
+		(Length_In,
+         Width_In,
+		 Height_In);
 	}
     return 0;
 }

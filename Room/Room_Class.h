@@ -27,39 +27,48 @@
 #ifndef _ROOM_CLASS_h
 #define _ROOM_CLASS_h
 
-#define Black 
-
-namespace Presets
+enum Colours
 {
-	uint16_t Get_Paint_Colour_Code(Colours Paint_Colour_Name);
-}
+	Pink,
+	Red,
+	Blue,
+	White
+};
+
+//namespace Paints
+//{
+//	//uint16_t Get_Paint_Colour_Code(Colours Paint_Colour_Name);
+//	//uint16_t Get_Spreading_Rate(Colours Paint_Colour_Name);
+//};
 
 
 class Generic_Room
 {//Class
 	private:
 	  //Allows access to sub-classes
-
-		uint8_t  Length;
-		uint8_t  Width;
-		uint8_t  Height;
-		uint16_t Area;
-        uint32_t Volume;
-
-		uint16_t Calculate_Area_Private(void);
-		uint32_t Calculate_Volume_Private(void);
+		int Length;
+		int Width;
+		int Height;
+		int Area;
+        int Volume;
+		void Calculate_Area_Private(void);
+		void Calculate_Volume_Private(void);
 	  
 public:
    
 	// Constructor -   (Length)   
 	//                 (Height)  
 	//                 (Width)  
-      Generic_Room 
-	     (uint8_t Length,  
-          uint8_t Width, 
-          uint8_t Height);
-	  
+    Generic_Room 
+	   (int Length,  
+        int Width, 
+        int Height);
 
+	void Initialise(void);
+	int Calculate_Area(void);
+	int Calculate_Volume(void);
+	int Return_Area(void);
+	int Return_Volume(void);
 };
 
 #endif

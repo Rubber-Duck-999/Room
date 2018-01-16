@@ -25,91 +25,93 @@
 
 
 #include "Room_Class.h"
-#include <stdint.h>
 #include <string>
 
 using namespace std;
 
-const uint8_t Paints = 4;
-
-enum Colours
-{
-	Pink,
-	Red,
-	Blue,
-	White
-};
+const int Paints = 4;
 
 
-namespace Paints
-{
-	//Namespace for presets for paints
-	// Contains two structures one for colours and axis
-
-	struct Preset_Paints
-	{
-		Colours  Paint_Colour_Name;
-		uint32_t Paint_Colour_Code;
-		uint8_t  Spreading_Rate;	 
-	};
-
-	//A data structure of four preset choices
-	Preset_Paints Presets_Paints[Paints]
-	{
-		{White, 0xFFFFFF, 10},	
-		{                   },
-		{           		},
-		{                   } 
-	};
-
-	uint16_t Get_Paint_Colour_Code(Colours Paint_Colour_Name)
-	{
-		return Presets_Paints[Paint_Colour_Name].;
-	};
-	uint16_t Get_Paint_Colour_Code(Colours Paint_Colour_Code)
-	{
-		return Presets_Paints[Paint_Colour_Name].;
-	};
-}
+//namespace Paints
+//{
+//	//Namespace for presets for paints
+//	// Contains two structures one for colours and axis
+//
+//	struct Preset_Paints
+//	{
+//		Colours  Paint_Colour_Name;
+//		uint32_t Paint_Colour_Code;
+//		uint8_t  Spreading_Rate;	 
+//	};
+//
+//	//A data structure of four preset choices
+//	Preset_Paints Presets_Paints[Paints]
+//	{
+//		{White, 0xFFFFFF, 10},	
+//		{White, 0xFFFFFF, 10},
+//		{           		},
+//		{                   } 
+//	};
+//
+//	//uint16_t Get_Paint_Colour_Code(Colours Paint_Colour_Name)
+//	//{
+//	//	return Presets_Paints[Paint_Colour_Name].Paint_Colour_Code;
+//	//};
+//	//uint16_t Get_Spreading_Rate(Colours Paint_Colour_Name)
+//	//{
+//	//	return Presets_Paints[Paint_Colour_Name].Spreading_Rate;
+//	//};
+//}
 
 
 Generic_Room::Generic_Room
-(uint8_t Length,  
- uint8_t Width, 
- uint8_t Height)
+  (int Length_In,  
+   int Width_In, 
+   int Height_In)
 	// Constructor -   (Length)   
 	//                 (Width)  
 	//                 (Height)  
 {
-	//Constructor Function
-	//Initialises all Member Values
-
+	Length = Length_In;
+	Width  = Width_In;
+	Height = Height_In;
 }
 
-uint16_t Calculate_Area_Private(void)
+void Calculate_Area_Private(void)
 {
 	Area = Length * Width;
-	return Area;
 }
 
-uint32_t Calculate_Volume_Private(void)
+void Calculate_Volume_Private(void)
 {
 	Volume = ((Length) * (Width) * (Height));
-	return Volume;
 }
 
+void Initialise(void)
+{
+	Calculate_Area_Private();
+	Calculate_Volume_Private();
+}
 
-uint16_t Generic_Menu::Calculate_Area(void)
+int Generic_Menu::Calculate_Area(void)
 {
 	Area = Length * Width;
     return Area;
 }
 
-uint32_t Generic_Menu::Get_Volume(void)
+int Generic_Menu::Return_Area(void)
+{
+	return Area;
+}
+
+int Generic_Menu::Get_Volume(void)
 {
 	Volume = ((Length) * (Width) * (Height));
 	return Volume;
 }
 
-
+int Generic_Menu::Return_Volume(void)
+{
+	return Volume;
+}
 
