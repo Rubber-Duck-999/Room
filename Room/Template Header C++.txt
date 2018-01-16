@@ -1,0 +1,26 @@
+/**************************************************************************************************
+*                  <2018> Room
+*          Please refer to license.txt for the 
+*          legal contents of this software build
+***************************************************************************************************
+*Project:          Room
+*File Name:        Template Header C++.txt
+*Description:      The description of the file must explain the functionality of the whole file
+***************************************************************************************************
+*Change History:
+*   Version        Date            Author          Description
+*   -------        ----            ------          -----------
+*   1.0            24/10/17        Rubber-Duck-999 The comment lines must not be edited, this is a
+*                                                  set format that must be followed
+*
+***************************************************************************************************
+*
+*Parameters:
+*   Name           Direction       Description
+*   ----           ---------       ----
+*   Input_Type     Input           This is a type value 
+*   Output_Type    Output          This is a type value 
+*
+***************************************************************************************************/
+
+
