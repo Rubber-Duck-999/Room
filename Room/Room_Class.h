@@ -4,7 +4,7 @@
 *          legal contents of this software build
 ***************************************************************************************************
 *Project:          Room
-*File Name:        Room_Class.cpp
+*File Name:        Room_Class.h
 *Description:      Main file in the project, calls the class library to create a instance of a room
 ***************************************************************************************************
 *Change History:
@@ -28,15 +28,14 @@
 #define _ROOM_CLASS_h
 
 #define Black 
-const string  = 0;
 
 namespace Presets
 {
-	uint16_t Get_Paint_Colour_Code(char[] Colour_Name);
+	uint16_t Get_Paint_Colour_Code(Colour_Name);
 }
 
 
-class Generic_Menu
+class Generic_Room
 {//Class
 	private:
 	  //Allows access to sub-classes

@@ -30,6 +30,8 @@
 
 using namespace std;
 
+const uint8_t Paints = 4;
+
 enum Colours
 {
 	Pink,
@@ -46,13 +48,14 @@ namespace Paints
 
 	struct Preset_Paints
 	{
-		 string Colour_Name;
+		Colours Paint_Colour_Name;
+
 		 
 		 
 	};
 
 	//A data structure of four preset choices
-	Preset_Paints Presets_Paints[2]
+	Preset_Paints Presets_Paints[Paints]
 	{
 		{
 			
@@ -70,9 +73,13 @@ namespace Paints
 		} 
 	};
 
-	uint16_t Get_Paint_Colour_Code(char[] Colour_Name)
+	uint16_t Get_Paint_Colour_Code(string )
 	{
-		return Presets_Paints[Preset_Choice].Array_Of_Colours[Colour_Choice];
+		return Presets_Paints[Preset_Choice].;
+	};
+	uint16_t Get_Paint_Colour_Code(string)
+	{
+		return Presets_Paints[Preset_Choice].;
 	};
 }
 
@@ -91,16 +98,16 @@ Generic_Room::Generic_Room
 }
 
 
-uint16_t Generic_Menu::Get_Area(uint8_t Length, uint8_t Width)
+uint16_t Generic_Menu::Get_Area(void)
 {
 	Area = Length * Width;
     return Area;
 }
 
-uint32_t Generic_Menu::Get_Volume()
+uint32_t Generic_Menu::Get_Volume(void)
 {
 	Volume = ((Length) * (Width) * (Height));
-    return Area
+	return Volume;
 }
 
 

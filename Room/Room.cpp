@@ -2,7 +2,7 @@
 *                  <2018> Room
 ***************************************************************************************************
 *Project:          Room
-*File Name:        Room.cpp
+*File Name:        Room_Class.cpp
 *Description:      Main file in the project, calls the class library to create a instance of a room
 ***************************************************************************************************
 *Change History:
@@ -24,12 +24,18 @@
 
 
 #include "stdafx.h"
+#include "Room_Class.h"
 
 
 int main()
 {
 	while(1)
 	{
+		Generic_Room Room
+		(
+
+
+		)
 		
 	}
     return 0;
