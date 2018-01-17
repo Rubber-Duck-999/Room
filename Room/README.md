@@ -13,10 +13,10 @@ of those windows.
 All values are placed in metres but are float values to allow for decimel values.
 
 All code followed the Interceptor Project C++ Coding standards, this c++ file has not been peer reviewed nor
-has it been unit tested. Thats a future aim to create a suitable test harness that will injividually test each 
+has it been unit tested. Thats a future aim to create a suitable test harness that will individually test each 
 function in the program.
 
-Splitting the class out into a seperate package would be a future aim as well.
+Splitting the class out into a separate package would be a future aim as well.
 
 If you are looking at the code and wondering how to follow it through linearly here is a representation by function name to help
 gauge what is each stage of the simple program.
