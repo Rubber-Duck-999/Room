@@ -68,49 +68,48 @@ enum Dimension
 //////////////////////////////////////////////////////////
 
 
-
 //////////////////////////////////////////////////////////
 /*
-              Declared Generic_Room Class
-			  - Creating an object for the room lets the user
+			Declared Generic_Room Class
+				- Creating an object for the room lets the user
 			  - create multiple rooms without constantly 
 			  - reproducing functions and code
 */
 //////////////////////////////////////////////////////////
 class Generic_Room
-{//Class
+{
+	//Class
 	private:
 		vector<float>         dimensions_;
 		float                 area_;
-        float                 volume_;
-        float                 windows_;
-        float                 totalWindowsArea_ = 0.0;
+		float                 volume_;
+		float                 windows_;
+		float                 totalWindowsArea_ = 0.0;
 		vector<float>         windowsArea_;
 		float                 coats_;
-        vector<vector<float>> windowDimensions_;
-        string Switch;
+		vector<vector<float>> windowDimensions_;
+		string Switch;
 		//Setup of all the private member variables which
 		//can only be accessed from this class's member
 		//functions
-public:
-	void Initialise(void);
-	void setDimensions(void);
-	void setWindows(void);
-	void getPaintRequired(void);
-	void calculateArea(void);
-	void calculateVolume(void);
-	void calculateWindowAreas(void);
-	void calculateTotalWindowArea(void);
-	void getTotalWindowArea(void);
-	//Declaration of the public member functions
-	//all of the functions are are of the function type void
-    //which means they have no return values
-    //The void in their parameter inputs is void stating that they have no inputs,
-    //this is not necessary in c++ but as the designer of the program
-    //it helps with absolutely stating that fact	
+	public:
+		void Initialise(void);
+		void setDimensions(void);
+		void setWindows(void);
+		void getPaintRequired(void);
+		void calculateArea(void);
+		void calculateVolume(void);
+		void calculateWindowAreas(void);
+		void calculateTotalWindowArea(void);
+		void getTotalWindowArea(void);
+		//Declaration of the public member functions
+		//all of the functions are are of the function type void
+			//which means they have no return values
+			//The void in their parameter inputs is void stating that they have no inputs,
+			//this is not necessary in c++ but as the designer of the program
+			//it helps with absolutely stating that fact	
 };
 //////////////////////////////////////////////////////////
-
 
 
 //////////////////////////////////////////////////////////
@@ -181,10 +180,9 @@ void Generic_Room::Initialise(void)
 //////////////////////////////////////////////////////////
 
 
-
 //////////////////////////////////////////////////////////
 /*
-    Definition of setDimensions
+  Definition of setDimensions
 	-Loop that calls three times for the value of each 
 	-dimension then pushes it into the dimensions vector
 */
@@ -207,7 +205,6 @@ void Generic_Room::setDimensions(void)
 //////////////////////////////////////////////////////////
 
 
-
 //////////////////////////////////////////////////////////
 /*
     Definition of calculateArea
@@ -228,7 +225,6 @@ void Generic_Room::calculateArea(void)
 //////////////////////////////////////////////////////////
 
 
-
 //////////////////////////////////////////////////////////
 /*
     Definition of calculateVolume
@@ -247,7 +243,6 @@ void Generic_Room::calculateVolume(void)
 	cout << "\n";
 }
 //////////////////////////////////////////////////////////
-
 
 
 //////////////////////////////////////////////////////////
@@ -288,7 +283,6 @@ void Generic_Room::setWindows(void)
 //////////////////////////////////////////////////////////
 
 
-
 //////////////////////////////////////////////////////////
 /*
     Definition of calculateWindowAreas
@@ -309,7 +303,6 @@ void Generic_Room::calculateWindowAreas(void)
 //////////////////////////////////////////////////////////
 
 
-
 //////////////////////////////////////////////////////////
 /*
     Definition of calculateTotalWindowArea
@@ -327,7 +320,6 @@ void Generic_Room::calculateTotalWindowArea(void)
 //////////////////////////////////////////////////////////
 
 
-
 //////////////////////////////////////////////////////////
 /*
     Definition of getTotalWindowArea
@@ -341,7 +333,6 @@ void Generic_Room::getTotalWindowArea(void)
     cout << totalWindowsArea_ << " m^2\n";
 }
 //////////////////////////////////////////////////////////
-
 
 
 //////////////////////////////////////////////////////////
@@ -382,7 +373,6 @@ void Generic_Room::getPaintRequired()
 //////////////////////////////////////////////////////////
 
 
-
 //////////////////////////////////////////////////////////
 /*
     Definition of Object_Instance
@@ -399,7 +389,6 @@ void Object_Instance(void)
 	//Setups the Room instance
 }
 //////////////////////////////////////////////////////////
-
 
 
 //////////////////////////////////////////////////////////

@@ -1,6 +1,6 @@
 # Room #
 
-### Written in C++ ###
+## Written in C++ ##
 
 This program uses three measurement values for a room to tell the user:
 *Area of the Room floor
@@ -21,52 +21,30 @@ Splitting the class out into a separate package would be a future aim as well.
 If you are looking at the code and wondering how to follow it through linearly here is a representation by function name to help
 gauge what is each stage of the simple program.
 
-### Map ###
+## Compile ##
+
+g++ -o room Room.cpp
+
+## Map ##
 
 main
-  |
-  |
-  |
+
 Object_Instance
-  |
-  |
-  |
+
 Create instance of the class Generic_Room called Room
-  |
-  |
-  |
+
 Room.Initialise
-  |
-  |
-  |
+
 Room.setDimensions
-  |
-  |
-  |
+
 Room.calculateArea
-  |
-  |
-  |
+
 Room.calculateVolume
-  |
-  |
-  |
+
 Room.setWindows
-  |
-  |
-  |
+
 Room.calculateWindowAreas
-  |
-  |
-  |
+
 Room.calculateTotalWindowArea
-  |
-  |
-  |
+
 Room.getPaintRequired
-  
-  
-  
-  
-  
-  
